@@ -47,6 +47,11 @@ public class Book implements Reservable {
         isReserved = reserved;
     }
 
+}
+
+
+class Test{
+
     Book[] booklist = new Book[10];
 
     Car[] carlist = new Car[10];
@@ -61,7 +66,6 @@ public class Book implements Reservable {
         test[0] = car;
         test[1] = myBook;
     }
-
 }
 
 
@@ -140,7 +144,7 @@ class Library {
 
     // ... other methods for library functionalities
     public static void main(String[] args) {
-        Book book1 = new Book("Java for Beginners", "John Doe", 2023, "1234567890");
+        Book book1 = new Book("Java for Beginners", "John Doe", 2023, "1234567890", false);
         Library library = new Library();
         library.addBook(book1);
 
