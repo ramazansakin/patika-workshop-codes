@@ -50,7 +50,7 @@ public class Book implements Reservable {
 }
 
 
-class Test{
+class Test {
 
     Book[] booklist = new Book[10];
 
@@ -152,6 +152,55 @@ class Library {
         library.borrowBook(borrowedBook, "Alice");
 
         // ... further interactions with library and books
+    }
+
+}
+
+interface Shape {
+
+    double calculate_area();
+
+}
+
+interface SquareOperation{
+
+    int calculate_x();
+
+}
+
+
+class Square implements Shape, SquareOperation {
+
+    private int edge;
+
+    public Square(int edge) {
+        this.edge = edge;
+    }
+
+
+
+    @Override
+    public double calculate_area() {
+        return Math.sqrt(edge);
+    }
+
+    public int calculate_x() {
+        return 2 * edge;
+    }
+}
+
+
+class Circle implements Shape {
+
+    private int radius;
+
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double calculate_area() {
+        return Math.PI * Math.sqrt(radius);
     }
 
 }
